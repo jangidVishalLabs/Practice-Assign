@@ -2,7 +2,7 @@
    Base Variables & Reset
 ------------------------------------ */
 :root {
-    --bg: #f0eae0;
+    --bg: #F0EADC;
     --text: #2f2f2f;
     --accent: #754f23;
     --muted: #dcd7d3;
@@ -30,14 +30,13 @@ body {
 .site-header {
     position: sticky;
     top: 0;
-    background: transparent;
+    background: var(--bg);
     z-index: 99;
 }
 
 .navbar {
     width: 100%;
     position: relative;
-    background: transparent;
 }
 
 .nav-inner {
@@ -291,7 +290,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+
 }
 
 .hero-image {
@@ -299,7 +298,6 @@ body {
     max-width: 560px;
     border-radius: 24px;
     object-fit: contain;
-    z-index: 999;
     top: 10%;
     position: relative;
 }
@@ -359,6 +357,180 @@ body {
         border-radius: 32px;
     }
 }
+
+/* ------------------------------------
+     Summer Collections Section
+  ------------------------------------ */
+.summer {
+    position: relative;
+    padding: 48px 64px;
+}
+
+.summer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summer-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.summer-collections-span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.summer-collections-span2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.summer-kicker {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    border-top: 2px solid var(--accent);
+    padding-top: 10px;
+    max-width: 520px;
+}
+
+.summer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.summer-body-right,
+.summer-body-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.summer-body,
+.summer-body2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    position: relative;
+}
+
+
+
+.summer-photo-lg {
+    height: 400px;
+    width: auto;
+    border-radius: 24px;
+}
+
+.summer-photo-sm {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    bottom: 10%;
+    justify-self: center;
+
+
+}
+
+.summer-photo-md {
+    height: 300px;
+    width: 400px;
+}
+
+.summer-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.summer::before {
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    width: 300px;
+    height: 540px;
+    background: rgba(193, 174, 160, 0.6);
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .summer {
+        padding: 48px 16px;
+
+    }
+
+    .summer-inner {
+        gap: 32px;
+    }
+
+    .summer-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .summer-collections-span {
+        font-size: 56px;
+    }
+
+    .summer-collections-span2 {
+        font-size: 36px;
+    }
+
+
+
+    .summer-photo-lg {
+        max-width: 460px;
+        border-radius: 28px;
+    }
+
+    .summer-photo-md {
+        max-width: 420px;
+        border-radius: 28px;
+    }
+
+    .summer-photo-sm {
+        max-width: 260px;
+        border-radius: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .summer-inner {
+        max-width: 1280px;
+        gap: 48px;
+    }
+
+    .summer-photo-lg {
+        max-width: 500px;
+        border-radius: 32px;
+    }
+
+    .summer-photo-md {
+        max-width: 440px;
+        border-radius: 32px;
+    }
+
+    .summer-photo-sm {
+        max-width: 280px;
+        border-radius: 32px;
+    }
+}
+
 
 /* ------------------------------------
      Winter Collections Section
@@ -734,12 +906,19 @@ body {
 }
 
 @media (max-width: 768px) {
+
+
     .testimonial-text {
         max-width: 100%;
     }
 }
 
 @media (max-width: 540px) {
+    .testimonial {
+        padding: 48px 16px;
+
+    }
+
     .testimonial-bottom {
         display: flex;
         flex-direction: column;
@@ -871,6 +1050,7 @@ body {
         padding: 40px 16px;
     }
 }
+
 
 
 /* Arrow icon as SVG */
