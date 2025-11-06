@@ -307,7 +307,7 @@ body {
 /* ------------------------------------
      Hero Responsive
   ------------------------------------ */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .hero-inner {
         flex-direction: row;
         align-items: stretch;
@@ -321,13 +321,31 @@ body {
 
     .hero-media {
         justify-content: flex-end;
-        display: none;
     }
 
     .hero-image {
-
         border-radius: 28px;
     }
+}
+
+@media (max-width:768px) {
+    .hero-inner {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .hero-content,
+    .hero-media {
+        flex: 1 1 0;
+    }
+
+    .hero-media {
+        /* justify-content: flex-end; */
+        display: none;
+    }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -353,6 +371,173 @@ body {
     align-items: center;
     min-width: 100%;
 
+}
+
+/* ------------------------------------
+     Testimonials Section
+  ------------------------------------ */
+.testimonials {
+    position: relative;
+    padding: 48px 16px;
+    min-width: 100%;
+}
+
+.testimonials-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 100%;
+}
+
+.testimonials-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.testimonials-title-line1 {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+
+}
+
+.testimonials-title-line2 {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 40px;
+    font-weight: 600;
+
+
+
+}
+
+.testimonials-kicker {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    border-top: 2px solid #754f23;
+    margin-top: 1rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimonial-media {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.testimonial-text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 60%;
+}
+
+.testimonal-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.testimonial-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.testimonial-role {
+    font-size: 14px;
+}
+
+.testimonial-controls {
+    display: flex;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .testimonials-inner {
+        gap: 32px;
+    }
+
+    .testimonial {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .testimonial-text {
+        max-width: 100%;
+    }
+
+    .testimonial-media {
+        flex: 0 0 auto;
+    }
+
+    .testimonial-content {
+        flex: 1 1 0;
+    }
+
+    .testimonials-title-line1 {
+        font-size: 32px;
+    }
+
+    .testimonials-title-line2 {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .testimonial-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonials-inner {
+        max-width: 1280px;
+        gap: 48px;
+    }
+
+    .testimonial-photo {
+        max-width: 360px;
+        border-radius: 28px;
+    }
 }
 
 .winter-inner {
