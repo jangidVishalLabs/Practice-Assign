@@ -1,0 +1,248 @@
+/* ------------------------------------
+   Base Variables & Reset
+------------------------------------ */
+:root {
+    --bg: #f0eae0;
+    --text: #2f2f2f;
+    --accent: #754f23;
+    --muted: #dcd7d3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+/* ------------------------------------
+     Header & Navbar
+  ------------------------------------ */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    position: relative;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Brand */
+.brand {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* ------------------------------------
+     Mobile Menu Toggle
+  ------------------------------------ */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ------------------------------------
+     Nav Links (mobile-first)
+  ------------------------------------ */
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    background: var(--bg);
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    z-index: 10;
+    min-width: 220px;
+}
+
+.navbar.open .nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+/* ------------------------------------
+     Nav Icons (wishlist, cart)
+  ------------------------------------ */
+.nav-actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    display: none;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-btn.cart {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+}
+
+/* ------------------------------------
+     Responsive Layouts
+  ------------------------------------ */
+@media (min-width: 768px) {
+    .nav-inner {
+        padding: 16px 24px;
+    }
+
+    .brand {
+        font-size: 28px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+
+    .nav-actions {
+        display: flex;
+    }
+
+    .mobile-actions {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-actions {
+        display: flex;
+        padding-top: 1rem;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-inner {
+        padding: 18px 32px;
+        max-width: 1280px;
+    }
+
+    .brand {
+        font-size: 32px;
+    }
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-btn img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .mobile-actions {
+        display: none;
+    }
+}
