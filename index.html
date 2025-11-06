@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sehlvet</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,18 +18,21 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
             <div class="nav-inner">
+                <!-- Brand -->
                 <a href="#" class="brand" aria-label="Sehlvet Home">Sehlvet</a>
 
+                <!-- Nav Links -->
                 <ul class="nav-links" id="primary-navigation" role="menubar">
                     <li><a href="#home" role="menuitem">Home</a></li>
                     <li><a href="#collections" role="menuitem">Collections</a></li>
                     <li><a href="#brands" role="menuitem">Brands</a></li>
                     <li><a href="#about" role="menuitem">About Us</a></li>
 
-                    <!-- Mobile wishlist/cart -->
+                    <!-- Mobile Wishlist / Cart -->
                     <li class="mobile-actions" aria-hidden="true">
                         <button class="icon-btn" aria-label="Wishlist">
                             <img src="./images/Combined-Shape.png" alt="Wishlist" loading="lazy" />
@@ -41,7 +44,7 @@
                     </li>
                 </ul>
 
-                <!-- Desktop wishlist/cart -->
+                <!-- Desktop Wishlist / Cart -->
                 <div class="nav-actions">
                     <button class="icon-btn" aria-label="Wishlist">
                         <img src="./images/Combined-Shape.png" alt="Wishlist" loading="lazy" />
@@ -52,7 +55,7 @@
                     </button>
                 </div>
 
-                <!-- Mobile menu button -->
+                <!-- Mobile Menu Toggle -->
                 <button class="menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation"
                     aria-expanded="false">
                     <span class="bar"></span>
@@ -63,7 +66,35 @@
         </nav>
     </header>
 
-    <script src="./scripts/script.js"></script>
+    <!-- HERO SECTION -->
+    <main id="home">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        Elevate Style, <span class="nowrap">Embrace Story</span>
+                    </h1>
+                    <p class="hero-body">
+                        We provide the largest clothing collection for any season. You can choose
+                        trendy or classy designs according to your preferences. Our services are super fast,
+                        and we update within 24 hours.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#collections" class="btn btn-primary">
+                            <span>Explore</span>
+                            <img class="btn-icon" src="./images/Group 54.png" alt="" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="hero-media">
+                    <img src="./images/Group 57.svg" alt="Elegant woman fashion portrait" class="hero-image"
+                        loading="lazy" />
+                </figure>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 </html>

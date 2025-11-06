@@ -6,6 +6,8 @@
     --text: #2f2f2f;
     --accent: #754f23;
     --muted: #dcd7d3;
+    --hero-pill: #754f23;
+    --hero-outline: #754f23;
 }
 
 * {
@@ -23,13 +25,13 @@ body {
 }
 
 /* ------------------------------------
-     Header & Navbar
-  ------------------------------------ */
+       Header & Navbar
+    ------------------------------------ */
 .site-header {
     position: sticky;
     top: 0;
     background: var(--bg);
-    z-index: 1000;
+    z-index: 99;
 }
 
 .navbar {
@@ -57,8 +59,8 @@ body {
 }
 
 /* ------------------------------------
-     Mobile Menu Toggle
-  ------------------------------------ */
+       Mobile Menu Toggle
+    ------------------------------------ */
 .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -82,8 +84,8 @@ body {
 }
 
 /* ------------------------------------
-     Nav Links (mobile-first)
-  ------------------------------------ */
+       Nav Links (mobile-first)
+    ------------------------------------ */
 .nav-links {
     list-style: none;
     display: none;
@@ -121,19 +123,12 @@ body {
 }
 
 /* ------------------------------------
-     Nav Icons (wishlist, cart)
-  ------------------------------------ */
+       Nav Icons
+    ------------------------------------ */
 .nav-actions {
     display: none;
     align-items: center;
     gap: 12px;
-}
-
-.mobile-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    display: none;
 }
 
 .icon-btn {
@@ -173,8 +168,8 @@ body {
 }
 
 /* ------------------------------------
-     Responsive Layouts
-  ------------------------------------ */
+       Responsive Layouts
+    ------------------------------------ */
 @media (min-width: 768px) {
     .nav-inner {
         padding: 16px 24px;
@@ -210,39 +205,130 @@ body {
     }
 
     .mobile-actions {
-        display: flex;
+        display: none;
     }
 }
 
-@media (max-width: 768px) {
-    .mobile-actions {
-        display: flex;
-        padding-top: 1rem;
-        justify-content: space-around;
+/* ------------------------------------
+     Hero Section
+  ------------------------------------ */
+.hero {
+    position: relative;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 48px 16px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.hero-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: clamp(32px, 6vw, 64px);
+    color: var(--text);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.hero-body {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+.hero-actions {
+    margin-top: 8px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 24px;
+    object-fit: contain;
+}
+
+/* ------------------------------------
+     Hero Responsive
+  ------------------------------------ */
+@media (min-width: 768px) {
+    .hero-inner {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .hero-content,
+    .hero-media {
+        flex: 1 1 0;
+    }
+
+    .hero-media {
+        justify-content: flex-end;
+    }
+
+    .hero-image {
+        border-radius: 28px;
     }
 }
 
 @media (min-width: 1024px) {
-    .nav-inner {
-        padding: 18px 32px;
+    .hero-inner {
         max-width: 1280px;
+        gap: 48px;
     }
 
-    .brand {
-        font-size: 32px;
-    }
-
-    .icon-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .icon-btn img {
-        width: 26px;
-        height: 26px;
-    }
-
-    .mobile-actions {
-        display: none;
+    .hero-image {
+        max-width: 620px;
+        border-radius: 32px;
     }
 }
