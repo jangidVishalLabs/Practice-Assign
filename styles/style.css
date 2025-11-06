@@ -22,8 +22,6 @@ body {
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: var(--text);
     background: var(--bg);
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 /* ------------------------------------
@@ -222,6 +220,8 @@ body {
     justify-content: center;
     align-items: center;
     max-height: calc(100vh - 15px);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .hero-inner {
@@ -370,8 +370,224 @@ body {
     display: flex;
     align-items: center;
     min-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
 
 }
+
+.winter-inner {
+    max-width: 1200px;
+
+    min-width: 100%;
+}
+
+.winter-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.winter-heading > .winter-title {
+
+    line-height: 1.1;
+    margin-bottom: 8px;
+
+}
+
+.winter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    width: 100%;
+}
+
+
+
+
+
+.winter-collections-span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 40px;
+    font-weight: 600;
+    display: block;
+}
+
+.winter-collections-span2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.winter-kicker {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 12px;
+    max-width: 400px;
+}
+
+.winter-body {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-top: 12px;
+}
+
+.btn-outline {
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.winter-image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.winter-media {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.winter-decor {
+    width: 300px;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: -25%;
+    bottom: 0;
+}
+
+.winter-photo {
+    width: 300px;
+}
+
+/* Decorative blur ellipse */
+.winter::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 260px;
+    height: 520px;
+    background: rgba(193, 174, 160, 0.6);
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+    .winter-inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .winter-body-right {
+        gap: 20px;
+    }
+
+    .winter-image {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .winter-photo {
+        width: 250px;
+    }
+
+    .winter-decor {
+        width: 250px;
+    }
+
+    .winter-collections-span {
+        font-size: 56px;
+    }
+
+    .winter-collections-span2 {
+        font-size: 36px;
+    }
+
+    .winter-photo {
+        max-width: 380px;
+        border-radius: 28px;
+    }
+
+    .winter-decor {
+        width: 220px;
+        border-radius: 28px;
+    }
+
+    .winter-body {
+        font-size: 15px;
+    }
+
+    .winter-kicker {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .winter-inner {
+        max-width: 1280px;
+        gap: 80px;
+    }
+
+    .winter-photo {
+        max-width: 428px;
+        border-radius: 32px;
+    }
+
+    .winter-decor {
+        width: 250px;
+        border-radius: 32px;
+    }
+}
+
 
 /* ------------------------------------
      Testimonials Section
@@ -380,6 +596,8 @@ body {
     position: relative;
     padding: 48px 16px;
     min-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .testimonials-inner {
@@ -540,223 +758,120 @@ body {
     }
 }
 
-.winter-inner {
+/* ------------------------------------
+     Footer
+  ------------------------------------ */
+.site-footer {
+    background: var(--accent);
+    color: #ddd9d6;
+    padding: 10px 30px;
+
+}
+
+.footer-inner {
     max-width: 1200px;
-
-    min-width: 100%;
-}
-
-.winter-heading {
-    width: 100%;
+    margin: 0 auto;
+    padding: 32px 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-
+    gap: 24px;
 }
 
-.winter-heading > .winter-title {
-
-    line-height: 1.1;
-    margin-bottom: 8px;
-
-}
-
-.winter-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-    width: 100%;
-}
-
-
-
-
-
-.winter-collections-span {
+.footer-logo {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 40px;
-    font-weight: 600;
-    display: block;
-}
-
-.winter-collections-span2 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
 }
 
-.winter-kicker {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 15px;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 12px;
-    max-width: 400px;
-}
-
-.winter-body {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 14px;
-    line-height: 1.8;
-    color: var(--text-primary);
-    max-width: 500px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
+.footer-social {
+    display: flex;
     gap: 12px;
-    padding: 12px 32px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    width: fit-content;
     margin-top: 12px;
 }
 
-.btn-outline {
-    border: 1.5px solid var(--accent);
-    color: var(--accent);
-    background: transparent;
+.footer-icon {
+    width: 24px;
+    height: 24px;
 }
 
-.btn-outline:hover {
-    background: var(--accent);
-    color: white;
-}
+/* reserved for future nav layout tweaks */
 
-.btn-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.winter-image {
+.footer-links {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-
+    flex-direction: column;
+    gap: 8px;
 }
 
-.winter-media {
-    position: relative;
+.footer-links a {
+    color: #ddd9d6;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    font-style: normal;
+}
+
+.footer-heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.contact-list {
+    list-style: none;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 6px;
 }
 
-
-
-.winter-decor {
-    width: 300px;
-    height: auto;
-    border-radius: 24px;
-    object-fit: cover;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: -25%;
-    bottom: 0;
+.contact-list a {
+    color: #ddd9d6;
+    text-decoration: none;
 }
 
-.winter-photo {
-    width: 300px;
+.contact-list a:hover,
+.contact-list a:focus-visible {
+    text-decoration: underline;
 }
 
-/* Decorative blur ellipse */
-.winter::before {
-    content: "";
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width: 260px;
-    height: 520px;
-    background: rgba(193, 174, 160, 0.6);
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: -1;
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 16px 24px;
+    color: #ddd9d6;
+    text-align: center;
 }
 
-
-
-
-
-@media (max-width: 768px) {
-
-    html,
-    body {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .winter-inner {
+@media (min-width: 768px) {
+    .footer-inner {
         flex-direction: row;
-        align-items: center;
-        gap: 48px;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .winter-body-right {
-        gap: 20px;
+    .footer-links {
+        min-width: 160px;
     }
 
-    .winter-image {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .winter-photo {
-        width: 250px;
-    }
-
-    .winter-decor {
-        width: 250px;
-    }
-
-    .winter-collections-span {
-        font-size: 56px;
-    }
-
-    .winter-collections-span2 {
-        font-size: 36px;
-    }
-
-    .winter-photo {
-        max-width: 380px;
-        border-radius: 28px;
-    }
-
-    .winter-decor {
-        width: 220px;
-        border-radius: 28px;
-    }
-
-    .winter-body {
-        font-size: 15px;
-    }
-
-    .winter-kicker {
-        font-size: 16px;
+    .contact-list {
+        min-width: 220px;
     }
 }
 
 @media (min-width: 1024px) {
-    .winter-inner {
+    .footer-inner {
         max-width: 1280px;
-        gap: 80px;
-    }
-
-    .winter-photo {
-        max-width: 428px;
-        border-radius: 32px;
-    }
-
-    .winter-decor {
-        width: 250px;
-        border-radius: 32px;
+        padding: 40px 16px;
     }
 }
+
 
 /* Arrow icon as SVG */
 .arrow-icon {
