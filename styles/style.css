@@ -215,6 +215,10 @@ body {
         justify-content: space-around;
         margin-top: 1rem;
     }
+
+    .nav-links {
+        gap: 10px;
+    }
 }
 
 /* ------------------------------------
@@ -239,6 +243,8 @@ body {
     align-items: center;
     gap: 12px;
     padding: 48px 18px;
+
+
 }
 
 .hero-content {
@@ -314,27 +320,29 @@ body {
      Hero Responsive
   ------------------------------------ */
 @media (min-width: 768px) {
+    .hero {
+        padding: 24px 18px;
+    }
+
     .hero-inner {
         flex-direction: row;
         align-items: stretch;
         gap: 32px;
+        padding: 0px 0px;
     }
 
-    .hero-content,
-    .hero-media {
-        flex: 1 1 0;
-    }
+    .hero-content {
+        flex: 1;
+        padding-top: 20px;
 
-    .hero-media {
-        justify-content: flex-end;
-    }
-
-    .hero-image {
-        border-radius: 28px;
     }
 }
 
 @media (max-width:768px) {
+    .hero {
+        padding: 0px 0px;
+    }
+
     .hero-inner {
         flex-direction: row;
         align-items: stretch;
@@ -486,17 +494,21 @@ body {
         gap: 32px;
     }
 
+    .summer-heading {
+        max-width: 400px;
+    }
+
     .summer-content {
         display: flex;
         flex-direction: column;
     }
 
     .summer-collections-span {
-        font-size: 56px;
+        font-size: 44px;
     }
 
     .summer-collections-span2 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
 
@@ -507,15 +519,17 @@ body {
     }
 
     .summer-photo-md {
-        max-width: 420px;
+        max-width: 360px;
         border-radius: 28px;
     }
 
     .summer-photo-sm {
-        max-width: 260px;
+        max-width: 200px;
         border-radius: 28px;
+
     }
 }
+
 
 @media (min-width: 1024px) {
     .summer-inner {
@@ -704,6 +718,9 @@ body {
 
 
 @media (max-width: 768px) {
+    .winter {
+        padding: 48px 18px;
+    }
 
 
     .winter-inner {
@@ -918,7 +935,9 @@ body {
 }
 
 @media (max-width: 768px) {
-
+    .testimonials {
+        padding: 48px 18px;
+    }
 
     .testimonial-text {
         max-width: 100%;
@@ -1316,4 +1335,36 @@ body {
     stroke: currentColor;
     fill: none;
     stroke-width: 2;
+}
+
+
+
+/* Mobile View */
+
+@media (max-width: 322px) {
+    .summer-photo-md {
+        padding-right: 4rem;
+    }
+
+    .summer-photo-sm {
+        display: none;
+    }
+
+    .winter,
+    .testimonials {
+        padding: 48px 18px;
+
+    }
+
+
+    .winter-decor,
+    .winter-photo {
+        width: 200px;
+    }
+
+    .testimonal-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
