@@ -1065,6 +1065,250 @@ body {
 
 
 
+/* ------------------------------------
+     Trending Collections Section
+  ------------------------------------ */
+.trending {
+    position: relative;
+    padding: 64px 18px;
+    overflow: hidden;
+}
+
+.trending-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.trending-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.trending-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.trending-title-line1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.trending-title-line2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.trending-kicker {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    color: var(--text);
+    border-top: 2px solid var(--accent);
+    padding-top: 12px;
+    max-width: 520px;
+}
+
+.trending-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    height: fit-content;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 2px solid #754F23;
+    padding: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card1 {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.trending-card:hover {
+    transform: translateY(-12px);
+}
+
+.trending-card-figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trending-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    border-radius: 28px;
+}
+
+.trending-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.trending-card-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.trending-icons-price {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.trending-price {
+    font-size: 16px;
+    color: #754f23;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.price-value {
+    display: inline;
+}
+
+.price-original {
+    color: #b0a8a0;
+    text-decoration: line-through;
+}
+
+.trending-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.trending-icons .icon-btn {
+    width: 36px;
+    height: 36px;
+}
+
+.trending-icons .icon-btn img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(8%) saturate(1423%) hue-rotate(346deg) brightness(94%) contrast(87%);
+}
+
+.trending-icons .icon-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(36%) sepia(82%) saturate(749%) hue-rotate(359deg) brightness(93%) contrast(92%);
+}
+
+.trending-cta {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+
+
+}
+
+.trending-decor {
+    position: absolute;
+    top: 20%;
+    right: -20%;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(135deg, #d4a373, #e8d0a9);
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Tablet and up: Horizontal layout with flexbox */
+@media (min-width: 768px) {
+    .trending {
+        padding: 80px 64px;
+    }
+
+    .trending-inner {
+        gap: 48px;
+    }
+
+    .trending-title-line1 {
+        font-size: 48px;
+    }
+
+    .trending-title-line2 {
+        font-size: 64px;
+    }
+
+    .trending-grid {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .trending-card {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .trending-card-middle {
+        flex: 1.4 1 0;
+    }
+
+    .trending-card-middle .trending-img {
+        height: 520px;
+    }
+
+    .trending-img {
+        height: 420px;
+    }
+
+    .trending-decor {
+        width: 400px;
+        height: 600px;
+        top: 15%;
+        right: -10%;
+    }
+}
+
+/* Desktop: Larger sizes */
+@media (min-width: 1024px) {
+    .trending-inner {
+        max-width: 1280px;
+        gap: 64px;
+    }
+
+    .trending-card-middle .trending-img {
+        height: 560px;
+    }
+}
+
 /* Arrow icon as SVG */
 .arrow-icon {
     width: 20px;
